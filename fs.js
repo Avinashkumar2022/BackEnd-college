@@ -1,2 +1,2 @@
 const fs=require("fs");
-fs.writeFile("new.txt");
+fs.appendFileSync("new.txt","I like to do nothing and sleep for the whole day");
