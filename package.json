@@ -1,0 +1,14 @@
+{
+  "name": "backend-college",
+  "version": "1.0.0",
+  "description": "I want to make it because I want to make it",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Avinash Kumar",
+  "license": "ISC",
+  "keywords": [
+    "#test"
+  ]
+}

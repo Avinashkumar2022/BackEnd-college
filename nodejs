@@ -1,0 +1,12 @@
+-Node.js is a js runtime built on chrome v8 javascript engine.
+-It is javascript running on a server
+-Node.js runs the v8 js engine, the core of Google Chrome, outside of the browser. This allows Node.js to be very performant
+- Node.js runs on various platforms(Windows, Linux, Unix, MacOS X, etc.)
+
+
+-In 2009 Ryan Dahl created node js.
+
+-When to use Node JS:
+>I/O Bound
+>Data streaming applications
+>Real time chat systems
