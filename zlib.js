@@ -9,8 +9,8 @@ const zlib=require('zlib');
 const server= http.createServer((res,req)=>
 {
     
-    const ws=fs.createWriteStream("Comp.txt");
-    ws.write("Hello world!!");
+    // const ws=fs.createWriteStream("Comp.txt");
+    // ws.write("Hello world!!");
     const rs=fs.createReadStream("Comp.txt","utf-8");
     if(req.url=="/comp")
     {
