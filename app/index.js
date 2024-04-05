@@ -4,6 +4,12 @@ const app = express(); // Initialize Express application
 const fs = require("fs");
 
 app.get("/", (req, res) => {
+    // res.send({
+    //     id:1,name:"Avinash",course:"CSE"
+    // })
+    res.json({
+        id:2,name:"hsaniva",course:"ESC"
+    })
     fs.writeFile('student.txt', "Hello from the other side", (err, data) => {
         if (err) {
             res.status(404).send("File not found");
@@ -13,7 +19,7 @@ app.get("/", (req, res) => {
                 if (err) {
                     res.status(404).send("File not found");
                 } else {
-                    res.download("student.txt");
+                    res.send(data);
                 }
             });
         }
