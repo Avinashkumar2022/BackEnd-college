@@ -4,28 +4,34 @@ const a=express()
 
 // server side connection
 
-const io =socketio(a)
-
-io.on("connection",socket=>
-{
-console.log("a user connected")
-})
-
-//message by client
-socket.on("chatmessage",msg)
-
-//broadcast the message of client to other clients
-io.emit("chatmessage",msg)
-
-io.on("disconnect",socket=>
-{
-    console.log("a user has been disconnected")
-})
-
-a.listen(3000,()=>
+const server=a.listen(3000,()=>
 {
     console.log("server started")
 })
+
+const io =socketIO(server);
+
+a.use(express.static(path.join(__dirname,"index.js")));
+
+
+io.on("connection",socket=>
+{
+    console.log("a user connected");
+    //Listen for messages by client
+    socket.on("chatmessage",msg =>
+    {
+        //broadcast the message of client to other clients
+        io.emit("chatmessage",msg);
+    });
+    socket.on("disconnect", ()=>
+    {
+        console.log("An User disconnected");
+    })
+})
+
+
+
+
 
 
 
