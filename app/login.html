@@ -1,0 +1,49 @@
+<!-- 
+    - implement a basic login page using HTML for a web application.
+    - Serve this login page using express.js on the /login route.
+    - Create a middleware function for authentication in express.js
+    - define a protected route '/profile' that requires authentication in Express.js, which validates user credentials against a hardcoded database.
+    - Additionally, set up a public route "/" that doesn't require authentication displaying a generic welcome message.
+    - Ensure that the authentication middleware restricts access to the /profile route based on the provided credentials.
+
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/submit" method="post">
+        <label for="username"></label>
+        <input type="text" id="username">
+        <br>
+        <br>
+        <label for="password"></label>
+        <input type="password" id="password">
+        <input type="checkbox" onclick="showPassword()"> Show Password
+        <br>
+        <br>
+
+        <button type="submit">Submit</button>
+        
+        <input type="submit">
+    </form>
+    <script>
+         function showPassword() 
+        {
+            var x = document.getElementById("password");
+            if (x.type === "password") 
+            {
+                x.type = "text";
+            } 
+            else 
+            {
+                x.type = "password";
+            }
+
+    }
+    </script>
+</body>
+</html>

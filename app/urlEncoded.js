@@ -16,9 +16,8 @@ app.post('/submit',(req,res)=>
     let data=JSON.stringify(req.body);
     const writeStream=fs.createWriteStream('body.json');
     writeStream.write(data);
-    
-    
 });
+
 app.listen(3000,()=>
 {
     console.log("server started")
