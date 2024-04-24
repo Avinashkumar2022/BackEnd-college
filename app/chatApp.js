@@ -7,5 +7,4 @@ Write a simple Socket.io chat application where multiple users can connect and e
 -Implement a feature to notify all users when a new user joins or leaves the chat.
 Ensure that the chat interface scrolls automatically to show the latest messages.
 
-
 */

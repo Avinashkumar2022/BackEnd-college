@@ -9,9 +9,9 @@ const server=a.listen(3000,()=>
     console.log("server started")
 })
 
-const io =socketIO(server);
+const io =socketio(server);
 
-a.use(express.static(path.join(__dirname,"index.js")));
+a.use(express.static(path.join(__dirname,"index.html")));
 
 
 io.on("connection",socket=>
