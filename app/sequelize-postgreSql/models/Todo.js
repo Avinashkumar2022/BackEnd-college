@@ -20,7 +20,7 @@ const Todo = sequelize.define('Todo', {
     }
     },
     {
-      tableName: 'todos', // Match the table name with your existing database table
+      tableName: 'db1', // Match the table name with your existing database table
       timestamps: false 
     });
 
